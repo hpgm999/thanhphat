@@ -158,5 +158,51 @@ import '../styles/global.css';
 				Copyright © 2026 by Homestay Miệt Thứ. All Rights Reserved.
 			</div>
 		</footer>
+
+		<script>
+			const bookingForm = document.getElementById('bookingForm');
+			if (bookingForm) {
+				bookingForm.addEventListener('submit', async (e) => {
+					e.preventDefault();
+					const form = e.target;
+					const btn = form.querySelector('button[type="submit"]');
+					const originalText = btn.innerHTML;
+					
+					// Simple Loading State (UX-01)
+					btn.innerHTML = 'ĐANG GỬI...';
+					btn.disabled = true;
+
+					const data = {
+						name: document.getElementById('name').value,
+						phone: document.getElementById('phone').value,
+						checkInDate: document.getElementById('checkin').value,
+						checkOutDate: document.getElementById('checkout').value,
+						roomType: document.getElementById('room').value,
+						requests: document.getElementById('note').value
+					};
+
+					try {
+						const response = await fetch('/api/booking', {
+							method: 'POST',
+							headers: { 'Content-Type': 'application/json' },
+							body: JSON.stringify(data)
+						});
+						
+						const result = await response.json();
+						if (result.success) {
+							alert('THÀNH CÔNG: ' + result.message);
+							form.reset();
+						} else {
+							alert('LỖI: ' + result.message);
+						}
+					} catch (error) {
+						alert('LỖI KẾT NỐI: Không thể gửi yêu cầu. Vui lòng thử lại.');
+					} finally {
+						btn.innerHTML = originalText;
+						btn.disabled = false;
+					}
+				});
+			}
+		</script>
 	</body>
 </html>
