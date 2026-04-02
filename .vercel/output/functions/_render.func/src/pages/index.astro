@@ -22,12 +22,7 @@ import '../styles/global.css';
 
 			<!-- Navigation Bar -->
 			<nav class="nav-bar">
-				<div class="menu-toggle" id="mobile-menu">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
-				</div>
-				<ul class="nav-links" id="nav-links">
+				<ul class="nav-links">
 					<li><a href="#">Trang chủ</a></li>
 					<li><a href="#phong">Phòng</a></li>
 					<li><a href="#dich-vu">Dịch vụ</a></li>
@@ -60,7 +55,7 @@ import '../styles/global.css';
 				<div class="grid-3">
 					<!-- Room Card 1 -->
 					<div class="card">
-						<img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phòng Nhà Sàn" class="card-img" />
+						<img src="https://images.unsplash.com/photo-1598928506311-c55d43f07bf2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phòng Nhà Sàn" class="card-img" />
 						<div class="card-content">
 							<h3 class="card-title">Phòng Nhà Sàn Bên Sông</h3>
 							<div class="card-meta">
@@ -72,7 +67,7 @@ import '../styles/global.css';
 					</div>
 					<!-- Room Card 2 -->
 					<div class="card">
-						<img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nhà Lá Riêng Biệt" class="card-img" />
+						<img src="https://images.unsplash.com/photo-1522771731478-44beb6bb74ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nhà Lá Riêng Biệt" class="card-img" />
 						<div class="card-content">
 							<h3 class="card-title">Nhà Lá Riêng Biệt</h3>
 							<div class="card-meta">
@@ -154,8 +149,8 @@ import '../styles/global.css';
 				</div>
 				<div style="background: white; color: black; padding: 30px; border-radius: 20px; text-align: center; display: flex; flex-direction: column; justify-content: center;">
 					<h4 style="margin-bottom: 10px;">BẢN ĐỒ</h4>
-					<div style="flex-grow: 1; background: #eaeaea; border-radius: 10px; overflow: hidden; min-height: 200px;">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15745.315998188265!2d105.0863004!3d9.4447008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a12a5db6b0cfd7%3A0xc66c1f1ec7de5066!2sU%20Minh%20Th%C6%B0%E1%BB%A3ng%20National%20Park!5e0!3m2!1sen!2s!4v1680000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<div style="flex-grow: 1; background: #eaeaea; border-radius: 10px; display: flex; align-items: center; justify-content: center; min-height: 150px; color: #888;">
+						Bản đồ iframe Google Map
 					</div>
 				</div>
 			</div>
@@ -165,16 +160,6 @@ import '../styles/global.css';
 		</footer>
 
 		<script>
-			// Mobile Menu Toggle
-			const mobileMenu = document.getElementById('mobile-menu');
-			const navLinks = document.getElementById('nav-links');
-			if (mobileMenu && navLinks) {
-				mobileMenu.addEventListener('click', () => {
-					navLinks.classList.toggle('active');
-				});
-			}
-
-			// Booking Form
 			const bookingForm = document.getElementById('bookingForm');
 			if (bookingForm) {
 				bookingForm.addEventListener('submit', async (e) => {
