@@ -1,19 +1,8 @@
 ---
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<!doctype html>
-<html lang="vi">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-		<title>Homestay Miệt Thứ - Nghỉ Dưỡng Lành Mạnh</title>
-	</head>
-	<body>
+<BaseLayout>
 
 		<!-- Glassmorphism Nav (RD-01) -->
 		<nav class="floating-nav" id="navbar">
@@ -50,7 +39,7 @@ import '../styles/global.css';
 					</div>
 				</div>
 				<div class="hero-visual">
-					<img class="hero-img-main" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Miệt Thứ Homestay" />
+					<img class="hero-img-main" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Nhà sàn bên sông Homestay Miệt Thứ An Giang" width="1200" height="800" fetchpriority="high" />
 					<div class="hero-badge">
 						<div>
 							<strong style="display: block; font-size: 1.2rem; color: var(--color-primary);">4.9/5 ⭐</strong>
@@ -66,7 +55,7 @@ import '../styles/global.css';
 			<svg class="about-decor" viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M50 0C50 27.6 27.6 50 0 50C27.6 50 50 72.4 50 100C50 72.4 72.4 50 100 50C72.4 50 50 27.6 50 0Z"/></svg>
 			<div class="container about-inner reveal">
 				<div>
-					<img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Chốn bình yên" style="box-shadow: var(--shadow-md); border-radius: 40px 12px 40px 12px;" />
+					<img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Không gian mộc mạc yên bình tại Homestay Miệt Thứ Bên Sông, An Giang" width="1000" height="700" loading="lazy" style="box-shadow: var(--shadow-md); border-radius: 40px 12px 40px 12px;" />
 				</div>
 				<div>
 					<h4 class="section-subtitle">Câu chuyện của chúng tôi</h4>
@@ -95,7 +84,7 @@ import '../styles/global.css';
 				<!-- Room 1 -->
 				<div class="room-card">
 					<div class="room-img-wrap">
-						<img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phòng Nhà Sàn" />
+						<img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phòng Nhà Sàn Bên Sông - nghỉ dưỡng miền Tây tại Homestay Miệt Thứ" width="800" height="600" loading="lazy" />
 					</div>
 					<div style="padding: 30px;">
 						<h3 style="font-size: 1.5rem; margin-bottom: 12px;">Nhà Sàn Bên Sông</h3>
@@ -112,7 +101,7 @@ import '../styles/global.css';
 				<!-- Room 2 -->
 				<div class="room-card">
 					<div class="room-img-wrap">
-						<img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nhà Lá Tách Biệt" />
+						<img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nhà lá tách biệt riêng tư - Homestay sông nước An Giang" width="800" height="600" loading="lazy" />
 					</div>
 					<div style="padding: 30px;">
 						<h3 style="font-size: 1.5rem; margin-bottom: 12px;">Nhà Lá Tách Biệt</h3>
@@ -129,7 +118,7 @@ import '../styles/global.css';
 				<!-- Room 3 -->
 				<div class="room-card">
 					<div class="room-img-wrap">
-						<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phòng Tập Thể" />
+						<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phòng tập thể lưu trú cho nhóm và gia đình tại Homestay Miệt Thứ" width="800" height="600" loading="lazy" />
 					</div>
 					<div style="padding: 30px;">
 						<h3 style="font-size: 1.5rem; margin-bottom: 12px;">Phòng Tập Thể</h3>
@@ -152,17 +141,17 @@ import '../styles/global.css';
 			
 			<div class="bento-grid">
 				<div class="bento-item bento-large">
-					<img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ẩm thực" />
+					<img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ẩm thực đồng quê miền Tây - lẩu mắm cá lóc nướng trui tại Homestay Miệt Thứ" width="800" height="600" loading="lazy" />
 					<h3 class="bento-title">Ẩm Thực Đồng Quê</h3>
 					<p>Thưởng thức lẩu mắm, cá lóc nướng trui và các rau rừng tươi ngon ngay tại vườn.</p>
 				</div>
 				<div class="bento-item bento-wide">
-					<img src="https://images.unsplash.com/photo-1536697246787-1f7ebf8e6cdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Xuồng 3 lá" />
+					<img src="https://images.unsplash.com/photo-1536697246787-1f7ebf8e6cdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chèo xuồng ba lá trên kênh rạch miền Tây - trải nghiệm văn hoá Miệt Thứ" width="800" height="400" loading="lazy" />
 					<h3 class="bento-title">Chèo Xuồng Ba Lá</h3>
 					<p>Dọc theo những con rạch rợp bóng dừa nước mát rượi.</p>
 				</div>
 				<div class="bento-item bento-square">
-					<img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Đờn Ca" />
+					<img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Đêm đờn ca tài tử Nam Bộ tại sân Homestay Miệt Thứ" width="600" height="400" loading="lazy" />
 					<h3 class="bento-title">Đờn Ca</h3>
 					<p>Nghe tài tử ca vang.</p>
 				</div>
@@ -405,5 +394,29 @@ import '../styles/global.css';
 				});
 			}
 		</script>
-	</body>
-</html>
+
+		<!-- FAQ Section (SEO-05 + Schema already in BaseLayout) -->
+		<section id="faq" class="section container reveal">
+			<h4 class="section-subtitle">Giải đáp thắc mắc</h4>
+			<h2 class="section-title" style="margin-bottom: 50px;">Câu Hỏi Thường Gặp</h2>
+			<div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
+				<details style="background: white; border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm); cursor: pointer;">
+					<summary style="font-weight: 600; font-size: 1.1rem; color: var(--color-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">Homestay Miệt Thứ ở đâu tại An Giang? <span style="color: var(--color-accent); font-size: 1.4rem;">+</span></summary>
+					<p style="margin-top: 16px; color: var(--color-text-muted); line-height: 1.7;">Homestay toạ lạc tại Mương Đào C, xã Vân Khánh, tỉnh An Giang — ngay bên dòng sông yên tĩnh. Toạ độ GPS: 9.605246, 104.931250. Có thể đến bằng xe máy, ô tô hoặc thuyền máy.</p>
+				</details>
+				<details style="background: white; border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm); cursor: pointer;">
+					<summary style="font-weight: 600; font-size: 1.1rem; color: var(--color-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">Homestay có những loại phòng nào? <span style="color: var(--color-accent); font-size: 1.4rem;">+</span></summary>
+					<p style="margin-top: 16px; color: var(--color-text-muted); line-height: 1.7;">Chúng tôi có 3 hạng phòng: <strong>Nhà Sàn Bên Sông</strong> (35m², 2 người), <strong>Nhà Lá Tách Biệt</strong> (39m², 3 người) và <strong>Phòng Tập Thể</strong> (50m², phù hợp 8 người — lý tưởng cho gia đình và nhóm bạn đông).</p>
+				</details>
+				<details style="background: white; border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm); cursor: pointer;">
+					<summary style="font-weight: 600; font-size: 1.1rem; color: var(--color-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">Cách đặt phòng như thế nào? <span style="color: var(--color-accent); font-size: 1.4rem;">+</span></summary>
+					<p style="margin-top: 16px; color: var(--color-text-muted); line-height: 1.7;">Điền vào <a href="#booking" style="color: var(--color-accent); font-weight: 600;">Form Đặt Phòng</a> trên trang này hoặc gọi trực tiếp Hotline <strong>0916270718</strong>. Lễ tân sẽ liên hệ xác nhận trong vòng 15 phút.</p>
+				</details>
+				<details style="background: white; border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm); cursor: pointer;">
+					<summary style="font-weight: 600; font-size: 1.1rem; color: var(--color-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">Homestay có Wifi miễn phí không? <span style="color: var(--color-accent); font-size: 1.4rem;">+</span></summary>
+					<p style="margin-top: 16px; color: var(--color-text-muted); line-height: 1.7;">Có, Wifi miễn phí dành cho tất cả khách lưu trú. Tuy nhiên do vị trí tại vùng nông thôn, tốc độ mạng ở mức trung bình — hoàn toàn đủ cho việc nhắn tin và lướt mạng xã hội.</p>
+				</details>
+			</div>
+		</section>
+
+</BaseLayout>

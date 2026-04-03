@@ -1,0 +1,159 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+}
+
+const {
+  title = "Homestay Miệt Thứ Bên Sông - Nghỉ Dưỡng Lành Mạnh tại An Giang",
+  description = "Homestay Miệt Thứ Bên Sông – Trải nghiệm nghỉ dưỡng mộc mạc, yên bình giữa sông nước miền Tây. Đặt phòng nhà sàn, nhà lá tại Vân Khánh, An Giang. Hotline: 0916270718.",
+  ogImage = "/og-image.jpg",
+  canonical = "https://thanhphathotel.vercel.app/",
+} = Astro.props;
+
+const siteUrl = "https://thanhphathotel.vercel.app";
+const fullOgImage = ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`;
+
+// JSON-LD: LodgingBusiness Schema
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Homestay Miệt Thứ Bên Sông",
+  "alternateName": "Miệt Thứ Homestay",
+  "description": "Homestay mộc mạc yên bình giữa sông nước miền Tây Nam Bộ, trải nghiệm nếp sống đồng quê đích thực.",
+  "url": siteUrl,
+  "telephone": "+84916270718",
+  "email": "hpgm999@gmail.com",
+  "image": fullOgImage,
+  "priceRange": "₫₫",
+  "currenciesAccepted": "VND",
+  "paymentAccepted": "Tiền mặt, Chuyển khoản",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mương Đào C",
+    "addressLocality": "xã Vân Khánh",
+    "addressRegion": "An Giang",
+    "addressCountry": "VN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 9.605246,
+    "longitude": 104.931250
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "07:00",
+    "closes": "22:00"
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Bãi đỗ xe", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Wifi miễn phí", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "View sông", "value": true }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "200",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+};
+
+// JSON-LD: FAQ Schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Homestay Miệt Thứ ở đâu tại An Giang?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Homestay Miệt Thứ toạ lạc tại Mương Đào C, xã Vân Khánh, tỉnh An Giang. Toạ độ GPS: 9.605246, 104.931250."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Homestay có những loại phòng nào?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chúng tôi có 3 hạng phòng: Nhà Sàn Bên Sông (35m², 2 người), Nhà Lá Tách Biệt (39m², 3 người) và Phòng Tập Thể (50m², 8 người)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cách đặt phòng Homestay Miệt Thứ như thế nào?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anh/Chị điền form đặt phòng trên trang web hoặc liên hệ trực tiếp Hotline 0916270718. Lễ tân sẽ xác nhận trong vòng 15 phút."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Homestay Miệt Thứ có wifi không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Có, Homestay Miệt Thứ cung cấp Wifi miễn phí cho tất cả khách lưu trú."
+      }
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonical} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="homestay an giang, nghỉ dưỡng miền tây, homestay sông nước, vân khánh an giang, miệt thứ homestay" />
+    <meta name="author" content="Homestay Miệt Thứ Bên Sông" />
+
+    <!-- Open Graph / Facebook / Zalo -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:site_name" content="Homestay Miệt Thứ Bên Sông" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullOgImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Preconnect for fonts (performance) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- font-display:swap is set via CSS to avoid render-blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap&display=swap" rel="stylesheet" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
