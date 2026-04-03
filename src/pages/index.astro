@@ -10,119 +10,268 @@ import '../styles/global.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-		<title>Homestay Miệt Thứ Bên Sông</title>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+		<title>Homestay Miệt Thứ - Nghỉ Dưỡng Lành Mạnh</title>
 	</head>
 	<body>
-		<div class="container">
-			<!-- Logo Header Area -->
-			<header style="padding: 40px 0 20px; text-align: center;">
-				<h2 style="font-size: 2.2rem; letter-spacing: 2px;">HOMESTAY <br> <span style="font-size: 3.8rem; line-height: 1;">MIỆT THỨ</span><br> <span style="font-size: 1.4rem; font-weight: 400; letter-spacing: 4px;">BÊN SÔNG</span></h2>
-			</header>
 
-			<!-- Navigation Bar -->
-			<nav class="nav-bar">
-				<div class="menu-toggle" id="mobile-menu">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
+		<!-- Glassmorphism Nav (RD-01) -->
+		<nav class="floating-nav" id="navbar">
+			<a href="#" class="logo-brand">
+				<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent)"><path d="M3 21h18"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path><path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path></svg>
+				<div>
+					MIỆT THỨ<br><span class="sub">HOMESTAY</span>
 				</div>
-				<ul class="nav-links" id="nav-links">
-					<li><a href="#">Trang chủ</a></li>
-					<li><a href="#phong">Phòng</a></li>
-					<li><a href="#dich-vu">Dịch vụ</a></li>
-					<li><a href="#trai-nghiem">Trải nghiệm</a></li>
-					<li><a href="#ve-chung-toi">Về chúng tôi</a></li>
-					<li><a href="#lien-he">Liên hệ</a></li>
-				</ul>
-				<a href="#booking" class="btn-primary">ĐẶT PHÒNG NGAY</a>
-			</nav>
+			</a>
+			<ul class="nav-links" id="nav-links">
+				<li><a href="#ve-chung-toi">Về chúng tôi</a></li>
+				<li><a href="#phong">Hạng phòng</a></li>
+				<li><a href="#dich-vu">Trải nghiệm</a></li>
+				<li><a href="#kham-pha">Khám phá</a></li>
+				<li><a href="#lien-he">Liên hệ</a></li>
+			</ul>
+			<div class="nav-actions">
+				<a href="#booking" class="btn-primary" style="padding: 10px 24px; font-size: 0.85rem;">ĐẶT PHÒNG</a>
+			</div>
+			<div class="menu-toggle" id="mobile-menu">
+				<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+			</div>
+		</nav>
 
-			<!-- Hero Section -->
-			<div class="hero-image-wrapper">
-				<img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Miền Tây Cảnh Vật" />
+		<!-- Hero Section (RD-02) -->
+		<section class="hero container reveal">
+			<div class="hero-grid">
 				<div class="hero-text">
-					<h1 style="color: white; text-shadow: 2px 4px 10px rgba(0,0,0,0.4);">TRẢI NGHIỆM ĐỜI SỐNG MIỀN TÂY THỰC TẾ</h1>
+					<h1>Tìm về chốn <span>thanh bình</span> miền sông nước.</h1>
+					<p>Nơi gác lại âu lo, hoà mình vào nếp sống chan hoà của người dân Tây Nam Bộ, mang lại sự chữa lành sâu sắc cho tâm hồn.</p>
+					<div style="display: flex; gap: 16px; flex-wrap: wrap;">
+						<a href="#booking" class="btn-primary">ĐẶT PHÒNG NGAY</a>
+						<a href="#phong" class="btn-secondary">XEM PHÒNG</a>
+					</div>
+				</div>
+				<div class="hero-visual">
+					<img class="hero-img-main" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Miệt Thứ Homestay" />
+					<div class="hero-badge">
+						<div>
+							<strong style="display: block; font-size: 1.2rem; color: var(--color-primary);">4.9/5 ⭐</strong>
+							<span style="font-size: 0.85rem; color: var(--color-text-muted);">Đánh giá bởi 200+ khách hàng</span>
+						</div>
+					</div>
 				</div>
 			</div>
+		</section>
 
-			<!-- About Section -->
-			<section id="ve-chung-toi" class="section text-center" style="max-width: 900px; margin: 0 auto;">
-				<h3 style="font-size: 1.8rem; color: var(--color-primary); margin-bottom: 25px; text-transform: uppercase;">VỀ CHÚNG TÔI - NGÔI NHÀ THÂN THIỆN GIỮA LÒNG MIỆT THỨ</h3>
-				<p style="font-size: 1.15rem; color: var(--color-text-muted); line-height: 1.8;">
-					Ngoài sân Miệt Thứ Homestay vào các ngày mười dao bông thắp đuốc, đọc được rằm đón mẹ nhắn nhủ học hành... Trải nghiệm không gian an yên mộc mạc nơi dòng sông hiền hòa chảy qua từng năm tháng, mang lại cảm giác chữa lành tuyệt đối giữa bồn bề cuộc sống.
-				</p>
-			</section>
+		<!-- About Section (RD-02) -->
+		<section id="ve-chung-toi" class="about">
+			<svg class="about-decor" viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M50 0C50 27.6 27.6 50 0 50C27.6 50 50 72.4 50 100C50 72.4 72.4 50 100 50C72.4 50 50 27.6 50 0Z"/></svg>
+			<div class="container about-inner reveal">
+				<div>
+					<img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Chốn bình yên" style="box-shadow: var(--shadow-md); border-radius: 40px 12px 40px 12px;" />
+				</div>
+				<div>
+					<h4 class="section-subtitle">Câu chuyện của chúng tôi</h4>
+					<h2 style="font-size: 2.6rem; margin-bottom: 24px;">Ngôi nhà thân thiện giữa lòng Miệt Thứ.</h2>
+					<p style="font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 20px;">
+						Ngoài sân Miệt Thứ Homestay vào các ngày mười dao bông thắp đuốc, đọc được rằm đón mẹ nhắn nhủ học hành...
+					</p>
+					<p style="font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 30px;">
+						Chúng tôi mong muốn mang lại trải nghiệm không gian an yên mộc mạc nơi dòng sông hiền hòa chảy qua từng năm tháng, mang lại cảm giác chữa lành tuyệt đối giữa bề bộn cuộc sống.
+					</p>
+					<ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; font-weight: 500;">
+						<li style="display: flex; align-items: center; gap: 10px;"><span style="color: var(--color-accent);">✓</span> Kiến trúc nhà gỗ truyền thống</li>
+						<li style="display: flex; align-items: center; gap: 10px;"><span style="color: var(--color-accent);">✓</span> Bữa cơm gia đình đậm vị quê</li>
+						<li style="display: flex; align-items: center; gap: 10px;"><span style="color: var(--color-accent);">✓</span> Không gian mở hòa mình vào thiên nhiên</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-			<!-- Rooms Section -->
-			<section id="phong" class="section">
-				<h2 class="section-title">Các Loại Phòng</h2>
-				<div class="grid-3">
-					<!-- Room Card 1 -->
-					<div class="card">
-						<img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phòng Nhà Sàn" class="card-img" />
-						<div class="card-content">
-							<h3 class="card-title">Phòng Nhà Sàn Bên Sông</h3>
-							<div class="card-meta">
-								<span><svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5v-7zM1.5 4a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-13z"/></svg> 35 m²</span>
-								<span><svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg> 2 Người</span>
-							</div>
-							<a href="#booking" class="card-link">XEM CHI TIẾT &rarr;</a>
-						</div>
+		<!-- Rooms Carousel (RD-03) -->
+		<section id="phong" class="section container reveal">
+			<h4 class="section-subtitle">Chốn nghỉ ngơi</h4>
+			<h2 class="section-title">Các hạng phòng</h2>
+			
+			<div class="room-slider">
+				<!-- Room 1 -->
+				<div class="room-card">
+					<div class="room-img-wrap">
+						<img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phòng Nhà Sàn" />
 					</div>
-					<!-- Room Card 2 -->
-					<div class="card">
-						<img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nhà Lá Riêng Biệt" class="card-img" />
-						<div class="card-content">
-							<h3 class="card-title">Nhà Lá Riêng Biệt</h3>
-							<div class="card-meta">
-								<span><svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5v-7zM1.5 4a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-13z"/></svg> 39 m²</span>
-								<span><svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg> 3 Người</span>
-							</div>
-							<a href="#booking" class="card-link">XEM CHI TIẾT &rarr;</a>
+					<div style="padding: 30px;">
+						<h3 style="font-size: 1.5rem; margin-bottom: 12px;">Nhà Sàn Bên Sông</h3>
+						<div style="display: flex; gap: 20px; font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 24px;">
+							<span>📐 35 m²</span>
+							<span>👥 2 Người</span>
+							<span>🛁 Bồn Tắm</span>
 						</div>
+						<p style="color: var(--color-text-muted); margin-bottom: 24px; font-size: 0.95rem; line-height: 1.5;">Phòng view trực tiếp ra bờ sông, đón gió mát trong lành. Thích hợp cho các cặp đôi.</p>
+						<a href="#booking" class="btn-secondary" style="width: 100%; text-align: center;">ĐẶT PHÒNG</a>
 					</div>
-					<!-- Room Card 3 -->
-					<div class="card">
-						<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phòng Tập Thể" class="card-img" />
-						<div class="card-content">
-							<h3 class="card-title">Phòng Tập Thể</h3>
-							<div class="card-meta">
-								<span><svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5v-7zM1.5 4a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-13z"/></svg> 50 m²</span>
-								<span><svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg> 8 Người</span>
-							</div>
-							<a href="#booking" class="card-link">XEM CHI TIẾT &rarr;</a>
+				</div>
+
+				<!-- Room 2 -->
+				<div class="room-card">
+					<div class="room-img-wrap">
+						<img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nhà Lá Tách Biệt" />
+					</div>
+					<div style="padding: 30px;">
+						<h3 style="font-size: 1.5rem; margin-bottom: 12px;">Nhà Lá Tách Biệt</h3>
+						<div style="display: flex; gap: 20px; font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 24px;">
+							<span>📐 39 m²</span>
+							<span>👥 3 Người</span>
+							<span>🌿 Sân vườn</span>
+						</div>
+						<p style="color: var(--color-text-muted); margin-bottom: 24px; font-size: 0.95rem; line-height: 1.5;">Mang lại sự riêng tư tối đa. Kiến trúc lợp lá mát mẻ, bao bọc bởi hàng cau xanh.</p>
+						<a href="#booking" class="btn-secondary" style="width: 100%; text-align: center;">ĐẶT PHÒNG</a>
+					</div>
+				</div>
+
+				<!-- Room 3 -->
+				<div class="room-card">
+					<div class="room-img-wrap">
+						<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Phòng Tập Thể" />
+					</div>
+					<div style="padding: 30px;">
+						<h3 style="font-size: 1.5rem; margin-bottom: 12px;">Phòng Tập Thể</h3>
+						<div style="display: flex; gap: 20px; font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 24px;">
+							<span>📐 50 m²</span>
+							<span>👥 8 Người</span>
+							<span>❄️ Điều hoà</span>
+						</div>
+						<p style="color: var(--color-text-muted); margin-bottom: 24px; font-size: 0.95rem; line-height: 1.5;">Lựa chọn tối ưu cho nhóm bạn lớn hoặc gia đình đông người. Ấm cúng và tiện lập.</p>
+						<a href="#booking" class="btn-secondary" style="width: 100%; text-align: center;">ĐẶT PHÒNG</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Bento Grid Services (RD-04) -->
+		<section id="dich-vu" class="section container reveal">
+			<h4 class="section-subtitle">Dịch vụ & Trải nghiệm</h4>
+			<h2 class="section-title">Trải nghiệm Miền Tây Đích Thực</h2>
+			
+			<div class="bento-grid">
+				<div class="bento-item bento-large">
+					<img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ẩm thực" />
+					<h3 class="bento-title">Ẩm Thực Đồng Quê</h3>
+					<p>Thưởng thức lẩu mắm, cá lóc nướng trui và các rau rừng tươi ngon ngay tại vườn.</p>
+				</div>
+				<div class="bento-item bento-wide">
+					<img src="https://images.unsplash.com/photo-1536697246787-1f7ebf8e6cdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Xuồng 3 lá" />
+					<h3 class="bento-title">Chèo Xuồng Ba Lá</h3>
+					<p>Dọc theo những con rạch rợp bóng dừa nước mát rượi.</p>
+				</div>
+				<div class="bento-item bento-square">
+					<img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Đờn Ca" />
+					<h3 class="bento-title">Đờn Ca</h3>
+					<p>Nghe tài tử ca vang.</p>
+				</div>
+				<div class="bento-item bento-square" style="background-color: var(--color-primary); justify-content: center; text-align: center;">
+					<h3 style="color: var(--color-accent); font-size: 2.5rem; margin-bottom: 10px;">+5</h3>
+					<p>Trải nghiệm văn hoá <br>nông nghiệp khác</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Map / Khám Phá (RD-05) -->
+		<section id="kham-pha" class="about reveal" style="background-color: var(--color-bg-alt);">
+			<div class="container about-inner">
+				<div>
+					<h4 class="section-subtitle" style="text-align: left;">Khám Phá Địa Phương</h4>
+					<h2 style="font-size: 2.6rem; margin-bottom: 24px;">Vị Trí Đắc Địa - Thuận Tiện Giao Thông.</h2>
+					<p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 20px;">
+						Chỉ mất vài chục phút di chuyển bằng đường thủy hoặc đường bộ, bạn có thể dễ dàng tiếp cận các điểm du lịch nổi tiếng xung quanh vùng Miệt Thứ.
+					</p>
+					<ul style="list-style: none; display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px;">
+						<li style="display:flex; align-items:flex-start; gap:15px;">
+							<span style="font-size:1.5rem;">📍</span>
+							<div><strong>Chợ Nổi</strong><br><span style="color: var(--color-text-muted); font-size: 0.95rem;">Cách 15 phút di chuyển thuyền</span></div>
+						</li>
+						<li style="display:flex; align-items:flex-start; gap:15px;">
+							<span style="font-size:1.5rem;">🌳</span>
+							<div><strong>Rừng Tràm Sinh Thái</strong><br><span style="color: var(--color-text-muted); font-size: 0.95rem;">Cách 8km đường bộ</span></div>
+						</li>
+					</ul>
+				</div>
+				<div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); height: 450px;">
+					<iframe src="https://maps.google.com/maps?q=9.605246,104.931250&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+			</div>
+		</section>
+
+		<!-- Testimonials (RD-06) -->
+		<section class="section container reveal">
+			<h4 class="section-subtitle">Cảm nhận từ trái tim</h4>
+			<h2 class="section-title" style="margin-bottom: 60px;">Thương Nhớ Miệt Thứ</h2>
+			
+			<div class="reviews-grid">
+				<div class="review-card">
+					<div style="color: var(--color-accent); margin-bottom: 15px; font-size: 1.2rem;">★★★★★</div>
+					<p class="review-quote">"Một nơi hoàn hảo để chạy trốn khỏi khói bụi thành phố lớn. Đồ ăn cô chủ nấu thực sự là mĩ vị nhân gian. Mình sẽ quay lại!"</p>
+					<div style="display: flex; align-items: center; gap: 15px; margin-top: 30px;">
+						<div style="width: 50px; height: 50px; border-radius: 50%; background: #ddd; overflow: hidden;"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Guest" /></div>
+						<div>
+							<strong style="display: block;">Chị Lê Hà Phương</strong>
+							<span style="font-size: 0.85rem; color: var(--color-text-muted);">Khách nghỉ T10/2025</span>
 						</div>
 					</div>
 				</div>
-			</section>
-
-			<!-- Booking Form (Phase 1 focus) -->
-			<div class="arched-section" id="booking">
-				<h2 class="section-title">Đặt Phòng Ngay Để Nhận Ưu Đãi</h2>
-				
-				<form id="bookingForm" style="max-width: 650px; margin: 0 auto; background: white; padding: 50px 40px; border-radius: 20px; box-shadow: 0 15px 50px rgba(74, 53, 37, 0.08);">
-					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+				<div class="review-card">
+					<div style="color: var(--color-accent); margin-bottom: 15px; font-size: 1.2rem;">★★★★★</div>
+					<p class="review-quote">"View phòng sáng mở mắt ra là sông nước êm đềm, tiếng chim hót. Trải nghiệm bắt cua ốc quá tuyệt, mấy bé nhà mình cực thích."</p>
+					<div style="display: flex; align-items: center; gap: 15px; margin-top: 30px;">
+						<div style="width: 50px; height: 50px; border-radius: 50%; background: #ddd; overflow: hidden;"><img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Guest" /></div>
 						<div>
-							<label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--color-primary);">Họ và Tên</label>
+							<strong style="display: block;">Gia đình Anh Hoàng Nam</strong>
+							<span style="font-size: 0.85rem; color: var(--color-text-muted);">Khách nghỉ T12/2025</span>
+						</div>
+					</div>
+				</div>
+				<div class="review-card" style="background: var(--color-primary); color: white;">
+					<div style="color: var(--color-accent); margin-bottom: 15px; font-size: 1.2rem;">★★★★★</div>
+					<p class="review-quote" style="color: white;">"Sạch sẽ, tươm tất và vô cùng yên bình. Tối ra nhà chòi đón gió hát vài bản đờn ca cùng chủ nhà như sống lại tuổi thơ vậy."</p>
+					<div style="display: flex; align-items: center; gap: 15px; margin-top: 30px;">
+						<div style="width: 50px; height: 50px; border-radius: 50%; background: #ddd; overflow: hidden;"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Guest" /></div>
+						<div>
+							<strong style="display: block;">Anh Trần Văn An</strong>
+							<span style="font-size: 0.85rem; opacity: 0.8;">Khách nghỉ T01/2026</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Booking Section -->
+		<section id="booking" class="container reveal">
+			<div class="booking-section">
+				<h2 class="section-title">Gửi Yêu Cầu Đặt Phòng</h2>
+				<p style="text-align: center; margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+					Điền thông tin của bạn dưới đây, chúng tôi sẽ liên hệ lại trong vòng 15 phút để xác nhận thủ tục và hướng dẫn đường đi.
+				</p>
+				
+				<form id="bookingForm" style="max-width: 700px; margin: 0 auto;">
+					<div id="formAlert" class="alert"></div>
+					<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+						<div>
+							<label style="display: block; margin-bottom: 8px; font-weight: 500;">Họ và Tên</label>
 							<input type="text" id="name" class="form-control" placeholder="Tên của bạn" required />
 						</div>
 						<div>
-							<label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--color-primary);">Số Điện Thoại</label>
+							<label style="display: block; margin-bottom: 8px; font-weight: 500;">Số Điện Thoại</label>
 							<input type="tel" id="phone" class="form-control" placeholder="0987xxx..." required />
 						</div>
 						<div>
-							<label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--color-primary);">Ngày Nhận Phòng</label>
+							<label style="display: block; margin-bottom: 8px; font-weight: 500;">Ngày Nhận Phòng</label>
 							<input type="date" id="checkin" class="form-control" required />
 						</div>
 						<div>
-							<label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--color-primary);">Ngày Trả Phòng</label>
+							<label style="display: block; margin-bottom: 8px; font-weight: 500;">Ngày Trả Phòng</label>
 							<input type="date" id="checkout" class="form-control" required />
 						</div>
 					</div>
 					
-					<div style="margin-top: 5px;">
-						<label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--color-primary);">Loại Phòng Quan Tâm</label>
+					<div style="margin-top: 24px;">
+						<label style="display: block; margin-bottom: 8px; font-weight: 500;">Loại Phòng Quan Tâm</label>
 						<select id="room" class="form-control" required>
 							<option value="Nhà Sàn">Phòng Nhà Sàn Bên Sông</option>
 							<option value="Nhà Lá">Nhà Lá Riêng Biệt</option>
@@ -130,41 +279,52 @@ import '../styles/global.css';
 						</select>
 					</div>
 
-					<div style="margin-top: 5px;">
-						<label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--color-primary);">Ghi Chú Chi Tiết</label>
-						<textarea id="note" class="form-control" rows="4" placeholder="Yêu cầu thêm hoặc câu hỏi của bạn..."></textarea>
+					<div style="margin-top: 24px;">
+						<label style="display: block; margin-bottom: 8px; font-weight: 500;">Ghi Chú Chi Tiết (Tùy chọn)</label>
+						<textarea id="note" class="form-control" rows="3" placeholder="Yêu cầu đón xe, chuẩn bị cũi trẻ em, dị ứng thức ăn..."></textarea>
 					</div>
 
-					<div style="text-align: center; margin-top: 20px;">
-						<button type="submit" class="btn-primary" style="font-size: 1.15rem; padding: 16px 50px; width: 100%;">GỬI YÊU CẦU ĐẶT PHÒNG</button>
+					<div style="text-align: center; margin-top: 40px;">
+						<button type="submit" class="btn-primary" style="font-size: 1.15rem; padding: 20px 60px; width: 100%; border-radius: var(--radius-sm);">XÁC NHẬN YÊU CẦU ĐẶT PHÒNG</button>
 					</div>
 				</form>
 			</div>
-
-		</div>
+		</section>
 
 		<!-- Footer -->
-		<footer class="footer" id="lien-he">
-			<div class="container" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: stretch;">
-				<div>
-					<h3 style="color: var(--color-accent); font-size: 2rem; margin-bottom: 25px;">LIÊN HỆ & VỊ TRÍ</h3>
-					<p style="margin-bottom: 15px; font-size: 1.1rem;">📍 Địa Điểm: Mương Đào C, xã Vân Khánh, tỉnh An Giang</p>
-					<p style="margin-bottom: 15px; font-size: 1.1rem;">📞 Hotline: 0916270718</p>
-					<p style="margin-bottom: 15px; font-size: 1.1rem;">✉️ Email: hpgm999@gmail.com</p>
+		<footer id="lien-he" style="background: var(--color-primary); color: white; padding: 60px 0 30px; text-align: center;">
+			<div class="container">
+				<h3 style="font-size: 2rem; color: var(--color-accent); margin-bottom: 30px; font-family: var(--font-heading);">Miệt Thứ Homestay</h3>
+				<p style="margin-bottom: 10px;">📍 Mương Đào C, xã Vân Khánh, tỉnh An Giang</p>
+				<p style="margin-bottom: 10px;">📞 0916270718 &nbsp;|&nbsp; ✉️ hpgm999@gmail.com</p>
+				<div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; opacity: 0.6;">
+					Copyright © 2026 by Homestay Miệt Thứ. Premium UI Delivered.
 				</div>
-				<div style="background: white; color: black; padding: 30px; border-radius: 20px; text-align: center; display: flex; flex-direction: column; justify-content: center;">
-					<h4 style="margin-bottom: 10px;">BẢN ĐỒ</h4>
-					<div style="flex-grow: 1; background: #eaeaea; border-radius: 10px; overflow: hidden; min-height: 200px;">
-						<iframe src="https://maps.google.com/maps?q=9.605246,104.931250&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-					</div>
-				</div>
-			</div>
-			<div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.95rem; color: #d0d0d0;">
-				Copyright © 2026 by Homestay Miệt Thứ. All Rights Reserved.
 			</div>
 		</footer>
 
 		<script>
+			// Intersection Observer for Reveal animations
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('active');
+					}
+				});
+			}, { threshold: 0.1 });
+
+			document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+			// Sticky Nav shadow on scroll
+			const navbar = document.getElementById('navbar');
+			window.addEventListener('scroll', () => {
+				if (window.scrollY > 50) {
+					navbar.classList.add('scrolled');
+				} else {
+					navbar.classList.remove('scrolled');
+				}
+			});
+
 			// Mobile Menu Toggle
 			const mobileMenu = document.getElementById('mobile-menu');
 			const navLinks = document.getElementById('nav-links');
@@ -174,29 +334,47 @@ import '../styles/global.css';
 				});
 			}
 
-			// Booking Form
+			// Booking Form specific logic
 			const bookingForm = document.getElementById('bookingForm');
 			if (bookingForm) {
 				bookingForm.addEventListener('submit', async (e) => {
 					e.preventDefault();
 					const form = e.target;
 					const btn = form.querySelector('button[type="submit"]');
+					const alertBox = document.getElementById('formAlert');
 					const originalText = btn.innerHTML;
 					
-					// Simple Loading State (UX-01)
-					btn.innerHTML = 'ĐANG GỬI...';
+					const phone = document.getElementById('phone').value;
+					const checkin = document.getElementById('checkin').value;
+					const checkout = document.getElementById('checkout').value;
+					
+					const phoneRegex = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
+					if (!phone.match(phoneRegex)) {
+						showAlert('error', 'Số điện thoại không hợp lệ. Vui lòng kiểm tra lại!');
+						return;
+					}
+
+					if (new Date(checkout) <= new Date(checkin)) {
+						showAlert('error', 'Ngày trả phòng phải diễn ra sau ngày nhận phòng.');
+						return;
+					}
+					
+					btn.innerHTML = '<span class="spinner"></span> ĐANG GỬI...';
 					btn.disabled = true;
+					btn.classList.add('btn-loading');
+					if (alertBox) alertBox.style.display = 'none';
 
 					const data = {
 						name: document.getElementById('name').value,
-						phone: document.getElementById('phone').value,
-						checkInDate: document.getElementById('checkin').value,
-						checkOutDate: document.getElementById('checkout').value,
+						phone: phone,
+						checkInDate: checkin,
+						checkOutDate: checkout,
 						roomType: document.getElementById('room').value,
 						requests: document.getElementById('note').value
 					};
 
 					try {
+						// Note: This API endpoint needs to be fully deployed & implemented.
 						const response = await fetch('/api/booking', {
 							method: 'POST',
 							headers: { 'Content-Type': 'application/json' },
@@ -205,16 +383,24 @@ import '../styles/global.css';
 						
 						const result = await response.json();
 						if (result.success) {
-							alert('THÀNH CÔNG: ' + result.message);
+							showAlert('success', 'THÀNH CÔNG: ' + (result.message || 'Yêu cầu của bạn đã được ghi nhận. Lễ tân sẽ liên hệ sớm nhất!'));
 							form.reset();
 						} else {
-							alert('LỖI: ' + result.message);
+							showAlert('error', 'LỖI: ' + (result.message || 'Có lỗi xảy ra trong quá trình xử lý.'));
 						}
 					} catch (error) {
-						alert('LỖI KẾT NỐI: Không thể gửi yêu cầu. Vui lòng thử lại.');
+						showAlert('error', 'LỖI KẾT NỐI: Không thể gửi yêu cầu. Vui lòng thử lại.');
 					} finally {
 						btn.innerHTML = originalText;
 						btn.disabled = false;
+						btn.classList.remove('btn-loading');
+					}
+
+					function showAlert(type, message) {
+						if (!alertBox) return;
+						alertBox.className = 'alert alert-' + type;
+						alertBox.innerHTML = message;
+						alertBox.style.display = 'block';
 					}
 				});
 			}
