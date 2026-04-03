@@ -1,6 +1,9 @@
 # build output
 dist/
 
+# Vercel build output - MUST NOT be committed (causes ERR_MODULE_NOT_FOUND on deploy)
+.vercel/
+
 # generated types
 .astro/
 
